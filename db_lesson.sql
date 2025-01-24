@@ -1,19 +1,19 @@
 --【Question 1】
 
-    CREATE TABLE departments (
+CREATE TABLE departments (
         -> department_id INT unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
         -> name VARCHAR(20) NOT NULL,
         -> created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
         -> updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         -> );
-
+    
 --【Question 2】
 
-    ALTER TABLE people ADD department_id INT unsigned NULL AFTER email;
+ALTER TABLE people ADD department_id INT unsigned NULL AFTER email;
 
 --【Question 3】
-
-    INSERT INTO departments (department_id, name) VALUE         --departmentテーブル
+    
+INSERT INTO departments (department_id, name) VALUE         --departmentテーブル
         ->(1, Sales)
         ->(2, Development)
         ->(3, Accounting)
@@ -21,7 +21,7 @@
         ->(5, Information Systems)
         ;
 
-    INSERT INTO reports (department_id, person_id name, email, age, gender) VALUE          --peopleテーブル
+        INSERT INTO reports (department_id, person_id name, email, age, gender) VALUE          --peopleテーブル
         ->(3, 12, 'Ali', 'ail@gizumo.jp', 48, 1)
         ->(2, 13, 'Hassan', 'hassan@gizumo.jp', 19, 1)
         ->(2, 14, 'Aisha', 'aisha@gizumo.jp', 27, 2)
@@ -46,7 +46,6 @@
         ->(20, 20, 'Taskunii fii bariis?')
         ->(21, 21, 'Laa askun fii marsiliya')             --めちゃくちゃどうでもいいのですが書くことがなかったのでアラビア語会話をラテン文字表記してます
         ;
-
 
 --【Question 4】
 
@@ -82,11 +81,9 @@ ORDER BY
         その際、department_idというレコードの値が1（つまり営業部に所属している人）のデータを、作成された時間ごとに昇順で表示してください。
     */
 
-
 --【Question 7】
 
 SELECT name FROM people WHERE (age BETWEEN 20 AND 29 AND gender = 2) OR (age BETWEEN 40 AND 49 AND gender = 1)
-
 
 --【Question 8】
 
